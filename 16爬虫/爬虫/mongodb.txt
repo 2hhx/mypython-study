@@ -1,0 +1,35 @@
+
+#管理员
+user admin
+创建用户：
+db.createUser({user:"yxp",pwd:"997997",roles:["root"]})
+连接数据库：
+mongo -u yxp -p 997997 --authenticationDatabase admin
+查看数据库
+show dbs
+切换数据库
+use xxx
+没有创建,插入数据（创建）
+db.table1.insert({"name":"haha"})
+删除数据库
+db.dropDatabase()
+查看表
+show tables
+创建表
+ db.table2.insert({"name":"mac"})
+删除表
+db.table2.drop()
+表中插入数据
+插入单行
+db.table1.insert({"name":"rocky"})
+插入多行
+db.table1.insertMany({"name":"rocky"},{"name":"nick"})
+查找表中数据
+db.table1.find({"name":"haha"})
+查找表中不是自己要的数据
+db.table1.find({"name":{"$ne":"haha"}})
+更改数据
+db.table1.update({"name":"haha"},{"name":"lin"})
+
+
+

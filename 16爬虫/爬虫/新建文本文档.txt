@@ -1,0 +1,5 @@
+
+user admin
+db.createUser({user:"yxp",pwd:"997997",roles:["root"]})
+mongo -u yxp -p 997997 --authenticationDatabase admin
+
